@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 flex flex-col">
+    <div class="p-4 flex flex-col sticky top-0">
         <div class="flex">
             <div>
                 <img class="rounded-full w-16 h-16" src="/images/profile-0.png" />
