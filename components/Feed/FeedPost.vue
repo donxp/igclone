@@ -26,12 +26,7 @@
 
 <script>
 export default {
-    props: ['post'],
-    data() {
-        return {
-            
-        }
-    }
+    props: ['post']
 }
 </script>
 
