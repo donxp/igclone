@@ -17,47 +17,19 @@
             <img class="w-full" :src="'/images/' + post.image">
         </div>
         <div style="padding: 10px 15px;">
-            <div>
-                <FeedPostButtons />
-            </div>
-            <div class="text-sm font-semibold">
-                {{ post.likes }} likes
-            </div>
-            <div>
-                <div class="text-sm text-gray-500" v-if="post.comments.length > maxCommentSummary">
-                    View all {{ post.comments.length }} comments
-                </div>
-                <div class="text-sm" v-for="(comment, index) in commentSummary" :key="index">
-                    <span class="font-semibold">{{ comment.from }}</span> {{ comment.comment }}
-                </div>
-            </div>
-            <div class="text-xxs uppercase font-semibold text-gray-500 mt-1">
-                {{ post.time_ago }}
-            </div>
+            <FeedPostButtons />
+            <FeedPostDetails :post="post" />
         </div>
+        <FeedPostAddComment />
     </div>
 </template>
 
 <script>
-import FeedPostButtons from './FeedPostButtons'
-
 export default {
-    components: { FeedPostButtons },
     props: ['post'],
     data() {
         return {
-            maxCommentSummary: 3
-        }
-    },
-    computed: {
-        commentSummary() {
-            const comments = []
-
-            for(let i = 0; i < Math.min(this.post.comments.length, this.maxCommentSummary); i++) {
-                comments.push(this.post.comments[i])
-            }
-
-            return comments
+            
         }
     }
 }

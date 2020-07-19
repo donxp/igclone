@@ -46,10 +46,6 @@
     padding: 2px 0;
 }
 
-.search-bar > input:focus {
-    outline: 0;
-}
-
 .header-controls > div:not(:last-of-type) {
     margin-right: 20px;
 }
