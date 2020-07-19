@@ -1,6 +1,6 @@
 <template>
     <div class="mt-6">
-        <FeedPost v-for="(post, index) in feed" :key="index" :post="post" />
+        <FeedPost class="feed-post" v-for="(post, index) in feed" :key="index" :post="post" />
     </div>
 </template>
 
@@ -18,7 +18,24 @@ export default {
                     image: 'post-1.png',
                     likes: 19,
                     description: 'Nature - cheaper than therapy.',
-                    comments: [],
+                    comments: [
+                        {
+                            from: 'someuser123',
+                            comment: 'Wow very nice'
+                        },
+                        {
+                            from: 'someuser123',
+                            comment: 'Wow very nice'
+                        },
+                        {
+                            from: 'someuser123',
+                            comment: 'Wow very nice'
+                        },
+                        {
+                            from: 'someuser123',
+                            comment: 'Wow very nice'
+                        }
+                    ],
                     time_ago: '1 hour ago'
                 },
                 {
@@ -44,3 +61,13 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.feed-post:not(:first-of-type) {
+    @apply mt-6;
+}
+
+.feed-post:last-of-type {
+    @apply mb-4;
+}
+</style>

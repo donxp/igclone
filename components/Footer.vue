@@ -16,9 +16,6 @@
 </template>
 
 <style scoped>
-.text-xxs {
-    font-size: 0.7em;
-}
 
 .links > span:not(:first-of-type):before {
     content: '•';
