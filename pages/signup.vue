@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="panel border bg-white mx-auto mt-2 p-8">
+        <div class="panel border bg-white mx-auto mt-4 p-8">
             <div class="logo text-xl">
                 <img class="mx-auto" src="/images/logo-xl.png" />
             </div>
